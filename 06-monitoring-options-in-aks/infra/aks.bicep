@@ -23,11 +23,11 @@ resource aks 'Microsoft.ContainerService/managedClusters@2021-05-01' = {
   properties: {
     dnsPrefix: aksName
     enableRBAC: true    
-    kubernetesVersion: '1.27.7'
+    kubernetesVersion: '1.28.5'
     agentPoolProfiles: [
       {
         name: 'system'
-        count: 2
+        count: 1
         vmSize: 'Standard_D2s_v3'
         vnetSubnetID: aksSubnetId
         osType: 'Linux'
